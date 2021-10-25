@@ -1,0 +1,265 @@
+html,
+body {
+	/* General fixes */
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+/* =========== Header =========== */
+.hero {
+	height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../img/background.png) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+h1 {
+	font-family: 'Poppins', sans-serif;
+	font-size: 4em;
+	margin: 0;
+	text-transform: uppercase;
+	width: 100%;
+    text-align: center;
+}
+h3 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.5em;
+}
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+}
+.info {
+	color: var(--info-color);
+	font-weight: 700;
+	/* Numbers look stupid in Raleway so we will make it Poppins */
+	font-family: 'Poppins', sans-serif;
+}
+.ip {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* =========== Sections =========== */
+section {
+	display: flex;
+    justify-content: center;
+    padding: 5em 0;
+	height: auto;
+	flex-wrap: wrap;
+}
+.light {
+	background: var(--light-color);
+	color: var(--light-text-color);
+}
+.dark {
+	background: var(--dark-color);
+	color: var(--dark-text-color);
+}
+section > p {
+	width: 75%;
+    padding-right: 5em;
+    padding-left: 5em;
+    padding-top: 3em;
+    cursor: default;
+    margin: 0;
+}
+strong {
+	text-transform: uppercase;
+}
+strong::after{
+    content: "\a";
+    white-space: pre;
+}
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+	flex-direction: row-reverse;
+}
+.feature {
+	display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 50px;
+	width: 75%
+}
+.feature p {
+	width: 25em;
+	font-size: 1.2em;
+}
+.feature img {
+    width: 20em;
+}
+hr {
+	width: 50%;
+}
+
+#staff {
+	width: 75%;
+}
+.staff-card {
+	display: inline-block;
+	margin: 1em;
+    position: relative;
+    padding: 1em;
+    background: #efefef;
+    text-align: center;
+	width: 18em;
+	border-radius: 1em;
+}
+.staff-card h3 {
+	line-height: 0;
+	font-family: 'Poppins',sans-serif;
+	color: #525252;
+}
+@media (max-width: 1200px) {
+  .staff-card {
+      width: 13em;
+  }
+}
+
+#news {
+	width: 75%;
+}
+.news-card {
+	margin: auto;
+    position: relative;
+    padding: 1em;
+    background: #34393e;
+    text-align: center;
+	border-radius: 1em;
+}
+.news-card h3 {
+	line-height: 0;
+	font-family: 'Poppins',sans-serif;
+}
+
+.btn {
+    padding: 10px 25px;
+    background: var(--button-color);
+    color: var(--button-text-color);
+    display: inline-block;
+    border-radius: 1em;
+    transition: .3s;
+	text-decoration: none;
+}
+.btn:hover {
+	background: var(--button-hover-color);
+	color: var(--button-hover-text-color);
+}
+
+footer {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #23272b;
+    padding: 30px 50px;
+}
+@media (min-width: 1200px) {
+  footer {
+    justify-content: space-between;
+  }
+}
+
+#header {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+#header li, #header a, #header button {
+    font-size: 1.2em;
+    color: var(--button-text-color);
+    text-decoration: none;
+    padding: 1em;
+}
+#header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 10%;
+	width: 100%;
+}
+#header .nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+#header .logo {
+	cursor: pointer;
+	left: 20%;
+}
+#header .nav_links {
+	list-style: none;
+	padding: 0;
+}
+#header .nav_links li {
+	display: inline-block;
+	padding: 0px 20px;
+}
+#header .nav_links li a {
+	transition: 0.3s;
+}
+#header .nav_links li a:hover {
+	color: var(--button-hover-color)
+}
+#header button {
+	padding: 9px 25px;
+	background-color: rgb(69 75 82);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: 0.3s;
+	color: #fff;
+}
+#header button:hover {
+	background-color: rgba(0, 136,169,0.8);
+}
+#header .cta {
+    position: absolute;
+    right: 20%;
+}
+@media (max-width: 1200px) {
+  #header .nav_links li {
+    padding: 0.5em;
+  }
+  #header .nav_links li a {
+	padding: 0;
+  }
+}
+
+/* =========== Animations =========== */
+.enlarge {
+	transition: all .3s;
+}
+.enlarge:hover {
+	transform: scale(1.1);
+}
+.shrink {
+	transition: all .3s;
+}
+.shrink:hover {
+	transform: scale(0.95);
+    box-shadow: inset -7px -6px 20px 4px #cfcfcf;
+}
+img {
+	transition: all .3s;
+	border-radius: 1em;
+}
+img:hover {
+	filter: drop-shadow(0.5rem 0.5rem 0.25rem rgba(0,0,0,0.2));
+}

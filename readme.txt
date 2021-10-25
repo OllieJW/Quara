@@ -1,0 +1,1 @@
+Take a look at the "config.css" and "config.js" and change the settings to how you like

@@ -1,0 +1,17 @@
+/* =========== CONFIGURATION!!!!! =========== */
+/* Ignore any errors, this code is correct and works! */
+:root {
+  --dark-color: #24272b;
+  --dark-text-color: #fff;
+  
+  --light-color: #fff;
+  --light-text-color: #24272b;
+  
+  --button-color: #24272b;
+  --button-text-color: #fff;
+  
+  --button-hover-color: #2b6ed9;
+  --button-hover-text-color: #fff;
+  
+  --info-color: #4bb4f1;
+}
