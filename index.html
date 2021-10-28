@@ -11,9 +11,21 @@
   <script id="staff-template" type="text/template">
     <div class="staff-card shrink">  
       <img src="https://crafatar.com/avatars/{{ uuid }}">
-     <h3>{{ name }}</h3> 
+      <h3>{{ name }}</h3> 
       <h4>{{ rank }}</h4>
     </div>
+  </script>
+   
+  <script id="vote-template" type="text/template">
+    <div class="vote-card shrink shrink-dark">  
+      <img src="{{ image }}">
+      <h3>{{ service }}</h3> 
+      <h4><a href="{{ link }}" class="btn">Vote</a></h4>
+    </div>
+  </script>
+  
+  <script id="news-template" type="text/template">
+    
   </script>
    
   <!-- 
@@ -26,6 +38,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
+  <script src="js/fireflies.js"></script>
   <script src="js/main.js"></script>
   <script src="config.js"></script>
   
@@ -43,7 +56,7 @@
   <header>
     <div class="hero" id="hero">
       <h1>Welcome to {{server_name}}!</h1>
-      <h3>Join <span class="server-status">0</span> other people on <span class="info ip" id="ip" onclick="copyIP()">{{server_ip}}</span></h3>
+      <h3 class="server-status-container">Join <span class="server-status info">0</span> other people on <span class="info ip" id="ip" onclick="copyIP()">{{server_ip}}</span></h3>
     </div>
   </header>
   
@@ -52,7 +65,7 @@
       <ul class="nav_links">
         <li><a href="#">Home</a></li>
         <li><a href="#">Forums</a></li>
-        <li><a href="#">Store</a></li>
+        <li><a href="#">Discord</a></li>
       </ul>
     </nav>
   </section>
@@ -138,6 +151,11 @@
       <a href="#" class="btn">Discord</a>
       <a href="#" class="btn">Forums</a>
     </div>
+  </section>
+  
+  <section class="dark">
+    <h1>Vote for us</h1>
+    <div id="vote"></div>
   </section>
   
   <footer>

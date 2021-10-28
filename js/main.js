@@ -25,10 +25,22 @@ window.onload = function() {
   });
   document.getElementById('target').innerHTML = rendered;
   
+  // MC API
+  const status_message = document.querySelector('.server-status')
+  const status_container = document.querySelector('.server-status-container')
   MinecraftAPI.getServerStatus(server_ip, {
 	port: server_port
   }, function (err, status) {
-	document.querySelector('.server-status').innerText = status.players.now;
+	if (err) {
+	  status_container.innerHTML = "Error getting server status of <span class='info'>" + server_ip + "</span><br><span class='info' style='color:#ff4545;font-size:.5em;'>" + err
+	} 
+	else if (status.online == false) {
+	  // If status.last_online returns "undefined". That means the API hasn't accessed your server yet so it doesn't know when it was last online
+	  status_container.innerHTML = "Server is <span class='info' style='color:#ff4545'>offline</span>. Last checked " + (status.last_online/60)
+	}
+	else {
+      status_message.innerText = status.players.now;
+	}
   });
 
 }
@@ -45,3 +57,21 @@ function staff(name, uuid, rank) {
     },500)
 }
 
+function vote(service, image, link) {
+  let voteTemplate = $("#vote-template").html()
+    .replaceAll("{{ service }}", service)
+    .replaceAll("{{ image }}", image)
+	.replaceAll("{{ link }}", link)
+  
+  setTimeout(
+    function() {
+      $("#vote").append(voteTemplate)
+    },500)
+}
+
+$(document).ready(function() {
+	if (firefly_count > 250) {
+	  console.log("Thats a lot of fireflies! Turn down the amount to reduce lag.")
+	}	
+	$.firefly({images : ['img/firefly.jpg'],total : firefly_count}); 	
+});
