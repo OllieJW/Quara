@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <head>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Raleway|Quicksand">
-  <link rel="stylesheet" href="css/style.css?v=0021">
-  <link rel="stylesheet" href="config.css">
-  
   <title>Quara | Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="title" content="Quara | Demo">
@@ -11,6 +7,7 @@
   <meta name="keywords" content="OllieJW, olliejw.me, OllieJW me, Spigot, Developer, Spigot Developer, Quara, Minecraft Server Website, Minecraft website theme, Minecraft server website theme">
   <meta name="theme-color" content="#4bb4f1">
   
+  <!-- Edit this to change staff cards! -->
   <script id="staff-template" type="text/template">
     <div class="staff-card shrink">  
       <img src="https://crafatar.com/avatars/{{ uuid }}">
@@ -18,11 +15,23 @@
       <h4>{{ rank }}</h4>
     </div>
   </script>
+   
+  <!-- 
+	Notice:
+	When you make changes to config,
+	add ?v and a random number to config.css/js
+	Example: <link rel="stylesheet" href="config.css?v=100">
+  -->
+  
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-  <script src="js/playercount.js"></script>
-  <script src="js/main.js?v=00015"></script>
-  <script src="config.js?v=0001"></script>
+  <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="config.js"></script>
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Raleway|Quicksand">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="config.css">
 </head>
 
 <body>
@@ -30,11 +39,11 @@
   <div id="target"></div>
   
   <script id="template" type="text/x-handlebars-template">
-  
+   
   <header>
     <div class="hero" id="hero">
       <h1>Welcome to {{server_name}}!</h1>
-      <h3>Join <span id="player-count" class="info" data-playercounter-ip="hypixel.net">0</span> other people on <span class="info ip" id="ip" onclick="copyIP()">{{server_ip}}</span></h3>
+      <h3>Join <span class="server-status">0</span> other people on <span class="info ip" id="ip" onclick="copyIP()">{{server_ip}}</span></h3>
     </div>
   </header>
   

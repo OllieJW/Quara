@@ -20,9 +20,17 @@ window.onload = function() {
   var compiled_template = Handlebars.compile(template);
   var rendered = compiled_template({
       server_name: server_name, 
-      server_ip: server_ip
+      server_ip: server_ip,
+	  server_port: server_port
   });
   document.getElementById('target').innerHTML = rendered;
+  
+  MinecraftAPI.getServerStatus(server_ip, {
+	port: server_port
+  }, function (err, status) {
+	document.querySelector('.server-status').innerText = status.players.now;
+  });
+
 }
 
 function staff(name, uuid, rank) {
@@ -36,3 +44,4 @@ function staff(name, uuid, rank) {
       $("#staff").append(staffTemplate)
     },500)
 }
+
