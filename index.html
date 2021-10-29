@@ -23,10 +23,6 @@
       <h4><a href="{{ link }}" class="btn">Vote</a></h4>
     </div>
   </script>
-  
-  <script id="news-template" type="text/template">
-    
-  </script>
    
   <!-- 
 	Notice:
@@ -42,6 +38,7 @@
   <script src="js/main.js"></script>
   <script src="config.js"></script>
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Raleway|Quicksand">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="config.css">
@@ -57,7 +54,14 @@
     <div class="hero" id="hero">
       <h1>Welcome to {{server_name}}!</h1>
       <h3 class="server-status-container">Join <span class="server-status info">0</span> other people on <span class="info ip" id="ip" onclick="copyIP()">{{server_ip}}</span></h3>
-    </div>
+	  <div id="pinned">
+        <div class="pinned-card shrink shrink-pinned">
+          <i class="fas fa-thumbtack"></i><strong>Pinned Notice</strong>
+          <p>A short, important message to catch attention like downtime, sales or notices.</p>
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+	</div>
   </header>
   
   <section id="header" class="dark">

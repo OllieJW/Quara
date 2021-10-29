@@ -1,17 +1,21 @@
-/* =========== CONFIGURATION!!!!! =========== */
-/* Ignore any errors, this code is correct and works! */
 :root {
-  --dark-color: #24272b;
-  --dark-text-color: #fff;
+  --dark-color: #24272b; /* Colour of dark section */
+  --dark-text-color: #fff; /* Colour of text in dark section */
   
-  --light-color: #fff;
-  --light-text-color: #24272b;
+  --light-color: #fff; /* Colour of light section */
+  --light-text-color: #24272b; /* Colour of text in light section */
   
-  --button-color: #24272b;
-  --button-text-color: #fff;
+  --button-color: #24272b; /* Colour of buttons */
+  --button-text-color: #fff; /* Colour of the text in buttons */
+  --button-hover-color: #2b6ed9; /* Colour of button when hovered over */
+  --button-hover-text-color: #fff; /* Colour of text in button when hovered over */
   
-  --button-hover-color: #2b6ed9;
-  --button-hover-text-color: #fff;
+  --info-color: #4bb4f1; /* Colour of important text (Player count, IP) */
   
-  --info-color: #4bb4f1;
+  --pinned-message-color: #222426; /* Colour pinned message section */
+  --pinned-message-text-color: #fff; /* Colour of text in pinned message section */
+  --pinned-button-color: #2e3032; /* Colour of button in pinned message section */
+  --pinned-button-text-color: #fff; /* Colour of text in button in pinned message section */
+  --pinned-button-hover-color: #b32a3d; /* Colour of button in pinned message section when hovered over */ 
+  --pinned-button-hover-text-color: #fff; /* Colour of text in button in pinned message section when hovered over */
 }
