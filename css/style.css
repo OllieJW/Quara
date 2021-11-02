@@ -111,9 +111,6 @@ hr {
 	width: 50%;
 }
 
-#staff {
-	width: 75%;
-}
 .staff-card {
 	display: inline-block;
 	margin: 1em;
@@ -135,12 +132,22 @@ hr {
   }
 }
 
-#vote {
-	width: 75%;
+.grid {
+	width: auto;
+	display: grid;
+    grid-template-areas:
+    ". . .";
+	overflow: hidden;
+}
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-areas:
+    ".";
+  }
 }
 .vote-card {
-	display: inline-block;
 	margin: 1em;
+    display: block;
     position: relative;
     padding: 1em;
     background: #373b40;
