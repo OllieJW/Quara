@@ -1,11 +1,17 @@
-  /*
-  * jQuery Firefly v0.1
-  * https://github.com/motyar/firefly
+/*!
+ * Quara Theme by OllieJW (https://olliejw.me)
+ * License - https://olliejw.me/tos
+ */
 
-  * Licensed under the MIT license.
-  * Copyright 2011 Dharmveer Motyar
-  * http://motyar.blogspot.com
-  */
+/*
+* jQuery Firefly v0.1
+* https://github.com/motyar/firefly
+
+* Licensed under the MIT license.
+* Copyright 2011 Dharmveer Motyar
+* http://motyar.blogspot.com
+*/
+
   (function($) {
     var defaults = {
       images : [

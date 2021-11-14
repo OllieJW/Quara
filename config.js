@@ -1,3 +1,8 @@
+/*!
+ * Quara Theme by OllieJW (https://olliejw.me)
+ * License - https://olliejw.me/tos
+ */
+
 var server_name = "YourServer";
 var server_ip = "hypixel.net";
 var server_port = 25565;

@@ -1,3 +1,8 @@
+/*!
+ * Quara Theme by OllieJW (https://olliejw.me)
+ * License - https://olliejw.me/tos
+ */
+
 function copyIP() {
     var before = document.getElementById("ip").innerText;
 	var ip = document.getElementById("ip");
