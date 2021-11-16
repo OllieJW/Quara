@@ -1,4 +1,4 @@
-<!-- 
+<!--
  Quara Theme by OllieJW (https://olliejw.me)
  License - https://olliejw.me/tos
 -->
@@ -11,38 +11,38 @@
   <meta name="description" content="Quara is a great looking website for Minecraft servers! Highly customisable with unique features.">
   <meta name="keywords" content="OllieJW, olliejw.me, OllieJW me, Spigot, Developer, Spigot Developer, Quara, Minecraft Server Website, Minecraft website theme, Minecraft server website theme">
   <meta name="theme-color" content="#4bb4f1">
-  
+
   <!-- Edit this to change staff cards! -->
   <script id="staff-template" type="text/template">
-    <div class="staff-card shrink">  
+    <div class="staff-card shrink">
       <img src="https://crafatar.com/avatars/{{ uuid }}">
-      <h3>{{ name }}</h3> 
+      <h3>{{ name }}</h3>
       <h4>{{ rank }}</h4>
     </div>
   </script>
-   
+
   <script id="vote-template" type="text/template">
-    <div class="vote-card shrink shrink-dark">  
+    <div class="vote-card shrink shrink-dark">
       <img src="{{ image }}">
-      <h3>{{ service }}</h3> 
+      <h3>{{ service }}</h3>
       <h4><a href="{{ link }}" class="btn">Vote</a></h4>
     </div>
   </script>
-   
-  <!-- 
+
+  <!--
 	Notice:
 	When you make changes to config,
 	add ?v and a random number to config.css/js
 	Example: <link rel="stylesheet" href="config.css?v=100">
   -->
-  
+
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
   <script src="js/fireflies.js"></script>
   <script src="js/main.js"></script>
   <script src="config.js"></script>
-  
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Raleway|Quicksand">
   <link rel="stylesheet" href="css/style.css">
@@ -50,11 +50,11 @@
 </head>
 
 <body>
-    
+
   <div id="target"></div>
-  
+
   <script id="template" type="text/x-handlebars-template">
-   
+
   <header>
     <div class="hero" id="hero">
       <h1>Welcome to {{server_name}}!</h1>
@@ -68,23 +68,24 @@
       </div>
 	</div>
   </header>
-  
+
   <section id="header" class="dark">
     <nav class="nav">
       <ul class="nav_links">
-        <li><a href="#">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="#">Forums</a></li>
         <li><a href="#">Discord</a></li>
+        <li><a href="innerpage.html">Innerpage</a></li>
       </ul>
     </nav>
   </section>
-  
+
   <section class="light">
     <p class="enlarge">
       <strong>About us</strong>
-      Hello, We are {{server_name}}! We are very happy to see you here. You may find our 
-      store, games, staff and much more at this website. We are run by a small team of 
-      developers each with unique parts to play in this server.	  
+      Hello, We are {{server_name}}! We are very happy to see you here. You may find our
+      store, games, staff and much more at this website. We are run by a small team of
+      developers each with unique parts to play in this server.
     </p>
     <p class="enlarge">
       <strong>History</strong>
@@ -101,7 +102,7 @@
       Praesent mollis, diam at vestibulum sodales, mi metus sagittis sem, et lobortis nulla dui nec leo. Mauris at metus tellus. Ut malesuada augue nec nisi. endrerit placerat dui. Morbi nec nisl quis est mattis facilisis ut quis enim.
     </p>
   </section>
-  
+
   <section class="dark">
     <h1>What makes us special</h1>
     <div class="feature right">
@@ -136,12 +137,12 @@
       </p>
     </div>
   </section>
-  
+
   <section class="light">
     <h1>Our staff team</h1>
     <div id="staff" class="grid"></div>
   </section>
-  
+
   <section class="dark">
     <h1>News and announcements</h1>
     <div id="news">
@@ -153,7 +154,7 @@
       </div>
     </div>
   </section>
-  
+
   <section class="light">
     <h1>Get Social</h1>
     <div class="buttons">
@@ -161,12 +162,12 @@
       <a href="#" class="btn">Forums</a>
     </div>
   </section>
-  
+
   <section class="dark">
     <h1>Vote for us</h1>
     <div id="vote" class="grid"></div>
   </section>
-  
+
   <footer>
     <!-- DO NOT REMOVE -->
     <!-- DO NOT REMOVE -->
@@ -180,5 +181,5 @@
     <p>Copyright &copy; {{server_name}} 2021</p>
   </footer>
   </script>
-  
+
 </body>

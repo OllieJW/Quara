@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+  <title>Quara | Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="title" content="Quara | Demo">
+  <meta name="description" content="Quara is a great looking website for Minecraft servers! Highly customisable with unique features.">
+  <meta name="keywords" content="OllieJW, olliejw.me, OllieJW me, Spigot, Developer, Spigot Developer, Quara, Minecraft Server Website, Minecraft website theme, Minecraft server website theme">
+  <meta name="theme-color" content="#4bb4f1">
+
+  <!-- Edit this to change staff cards! -->
+  <script id="staff-template" type="text/template">
+    <div class="staff-card shrink">
+      <img src="https://crafatar.com/avatars/{{ uuid }}">
+      <h3>{{ name }}</h3>
+      <h4>{{ rank }}</h4>
+    </div>
+  </script>
+
+  <script id="vote-template" type="text/template">
+    <div class="vote-card shrink shrink-dark">
+      <img src="{{ image }}">
+      <h3>{{ service }}</h3>
+      <h4><a href="{{ link }}" class="btn">Vote</a></h4>
+    </div>
+  </script>
+
+  <!--
+	Notice:
+	When you make changes to config,
+	add ?v and a random number to config.css/js
+	Example: <link rel="stylesheet" href="config.css?v=100">
+  -->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="config.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Raleway|Quicksand">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="config.css">
+</head>
+
+<body>
+
+  <div id="target"></div>
+
+  <script id="template" type="text/x-handlebars-template">
+
+  <header>
+    <div class="hero" id="hero" style="height:15vh">
+      <h1>Inner Page</h1>
+    </div>
+  </header>
+
+  <section id="header" class="dark">
+    <nav class="nav">
+      <ul class="nav_links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Forums</a></li>
+        <li><a href="#">Discord</a></li>
+        <li><a href="innerpage.html">Innerpage</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <section class="light">
+    <p>
+      Some extra information to show your users!<br>
+      Useful tips for editing this page
+    </p>
+    <ul style="text-align:left;width:80%">
+      <li>Add some text inside &lt;p&gt;these&lt;/p&gt; tags</li>
+      <li>Add a heading inside of &lt;h1&gt;these&lt;/h1&gt; tags</li>
+      <li>Add class="light" or  class="dark" to a &lt;section&gt;&lt;/section&gt;</li>
+      <li>Check this page's code to see how I have done it! + Learn basic HTML</li>
+      <li>Copy some sections from index.html to this page to customise it</li>
+    <ul>
+  </section>
+
+  <section class="dark">
+    <h1>Get Social</h1>
+    <div class="buttons">
+      <a href="#" class="btn">Discord</a>
+      <a href="#" class="btn">Forums</a>
+    </div>
+  </section>
+
+  <footer class="light">
+    <!-- DO NOT REMOVE -->
+    <!-- DO NOT REMOVE -->
+    <!-- DO NOT REMOVE -->
+    <!-- DO NOT REMOVE -->
+    <a href="https://client.olliejw.me"><img alt="Made by OllieJW" title="Made by OllieJW" src="https://olliejw.me/img/ollie.jpg" style="height:4em"></a>
+    <!-- END DO NOT REMOVE -->
+    <!-- END DO NOT REMOVE -->
+    <!-- END DO NOT REMOVE -->
+    <!-- END DO NOT REMOVE -->
+    <p>Copyright &copy; {{server_name}} 2021</p>
+  </footer>
+  </script>
+
+</body>

@@ -61,3 +61,10 @@
   }
 
   })(jQuery);
+
+  $(document).ready(function() {
+  	if (firefly_count > 250) {
+  	  console.log("Thats a lot of fireflies! Turn down the amount to reduce lag.")
+  	}
+  	$.firefly({images : ['img/firefly.jpg'],total : firefly_count});
+  });
